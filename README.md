@@ -11,3 +11,4 @@ $ java Recommender
 Wrong inputs will crash the code <br>
 Files need to be in the same directory as Recommender.java <br>
 genres are always taken as a input in integer (index) <br>
+Exception has been handled for one outlying data entry in movies.data (line :267) <br>
