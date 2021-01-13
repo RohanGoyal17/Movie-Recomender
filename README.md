@@ -1,4 +1,13 @@
 # Movie-Recomender
 
-part 1
+<b>Part 1</b>  Warm Up Problems <br><br>
 execute Recomender.java, the code will prompt for the required inputs.
+
+```
+$ javac Recommender.java
+$ java Recommender
+```
+
+Wrong inputs will crash the code <br>
+Files need to be in the same directory as Recommender.java <br>
+genres are always taken as a input in integer (index) <br>
