@@ -208,32 +208,35 @@ class recommend{
 		else recommended[4] = 4;
 		////////////////
 		for(int i = 5; i < movieData.size(); i++){
-			if(moviepredict[i][0] > moviepredict[recommended[0]][0]){
-			recommended[4] = recommended[3];
-			recommended[3] = recommended[2];
-			recommended[2] = recommended[1];
-			recommended[1] = recommended[0];
-			recommended[0] = i;
-			}
-			else if(moviepredict[i][0] > moviepredict[recommended[1]][0]){
+			if(moviepredict[i][1] == 0){
+				if(moviepredict[i][0] > moviepredict[recommended[0]][0]){
 				recommended[4] = recommended[3];
 				recommended[3] = recommended[2];
 				recommended[2] = recommended[1];
-				recommended[1] = i;
-			}
-			else if(moviepredict[i][0] > moviepredict[recommended[2]][0]){
-				recommended[4] = recommended[3];
-				recommended[3] = recommended[2];
-				recommended[2] = i;
-			}
-			else if(moviepredict[i][0] > moviepredict[recommended[3]][0]){
-				recommended[4] = recommended[3];
-				recommended[3] = i;
+				recommended[1] = recommended[0];
+				recommended[0] = i;
+				}
+				else if(moviepredict[i][0] > moviepredict[recommended[1]][0]){
+					recommended[4] = recommended[3];
+					recommended[3] = recommended[2];
+					recommended[2] = recommended[1];
+					recommended[1] = i;
+				}
+				else if(moviepredict[i][0] > moviepredict[recommended[2]][0]){
+					recommended[4] = recommended[3];
+					recommended[3] = recommended[2];
+					recommended[2] = i;
+				}
+				else if(moviepredict[i][0] > moviepredict[recommended[3]][0]){
+					recommended[4] = recommended[3];
+					recommended[3] = i;
+				}
 			}
 			else if(moviepredict[i][0] > moviepredict[recommended[4]][0]) recommended[4] = i;
 		}
 
 		for(int i = 0; i < 5; i++){
+			if(((String)movieData.get(recommended[i])[0]).length() != 0)
 			System.out.println(movieData.get(recommended[i])[0]);
 		}
 
