@@ -8,7 +8,7 @@ $ javac data.java
 $ java data
 ```
 
-Wrong inputs will crash the code <br>
+Wrong inputs will crash the code (GIGO ;) ) <br>
 Files need to be in the same directory as data.java <br>
 Genres are always taken as a input in integer (index) <br>
 Exception has been handled for one outlying data entry in movies.data (line :267) <br>
