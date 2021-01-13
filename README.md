@@ -23,6 +23,20 @@
        separated list of
        user id | age | gender | occupation | zip code
        The user ids are the ones used in the u.data data set.
+       
+<b>Warmup Problems </b>
+1) Top Movie By Genre 
+2) Top Movie By Year
+3) Top Movie By Year & Genre
+4) Most watched Movie
+5) Most watched Genre
+6) Highest rated Genre
+7) Most Active User
+
+ <b>Problem Statement</b> <br>
+ Given a user id, recommend 5 movies for that user. You should recommend a movie which the user has the highest probability of liking. You must not recommend a movie the user has already seen.
+
+<br>
 
 <b>Part 1</b>  Warm Up Problems <br><br>
 Execute data.java, the code will prompt for the required inputs.
