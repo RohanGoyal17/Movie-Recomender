@@ -4,8 +4,8 @@
 Execute Recomender.java, the code will prompt for the required inputs.
 
 ```
-$ javac Recommender.java
-$ java Recommender
+$ javac data.java
+$ java data
 ```
 
 Wrong inputs will crash the code <br>
