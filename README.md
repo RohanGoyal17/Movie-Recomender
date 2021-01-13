@@ -55,7 +55,7 @@ If in any part a query/queries are entered for which there is no movie, then the
 
 <b>Part 2</b> recommendation <br><br>
 
-using correlation between watched movie reviews and new movie to recommend
+using correlation between watched movie reviews and new movie to recommend <br>
 takes user id as input, prints out the names of 5 recommended movies
 ```
 $ javac recommend.java
