@@ -1,7 +1,7 @@
 # Movie-Recomender
 
 <b>Part 1</b>  Warm Up Problems <br><br>
-execute Recomender.java, the code will prompt for the required inputs.
+Execute Recomender.java, the code will prompt for the required inputs.
 
 ```
 $ javac Recommender.java
