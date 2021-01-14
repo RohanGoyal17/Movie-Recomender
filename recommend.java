@@ -23,7 +23,6 @@ class recommend{
 	static Map<Integer, Object[]> getMovieData(String fileName) throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader(fileName));
 		Map<Integer, Object[]> ret = new HashMap<>();
-		// StringTokenizer st;
 		String line;
 		while((line = br.readLine()) != null){
 			if(line.length() == 0)
@@ -236,8 +235,8 @@ class recommend{
 		}
 
 		for(int i = 0; i < 5; i++){
-			if(((String)movieData.get(recommended[i])[0]).length() != 0)
-			System.out.println(movieData.get(recommended[i])[0]);
+			if(((String)movieData.get(recommended[i]+1)[0]).length() != 0)
+			System.out.println(movieData.get(recommended[i]+1)[0]);
 		}
 
 	}
