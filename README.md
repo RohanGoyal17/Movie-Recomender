@@ -42,14 +42,14 @@
 Execute data.java, the code will prompt for the required inputs.
 
 ```
+$ javac parser.java
 $ javac data.java
 $ java data
 ```
 
-Wrong inputs will crash the code (GIGO ;) ) <br>
-Files need to be in the same directory as data.java <br>
+
 Genres are always taken as a input in integer (index) <br>
-Exception has been handled for one outlying data entry in movies.data (line :267) <br>
+Exception has been handled for one outlying data <br>
 If in any part a query/queries are entered for which there is no movie, then the output is blank <br> 
 
 
@@ -58,6 +58,8 @@ If in any part a query/queries are entered for which there is no movie, then the
 using correlation between watched movie reviews and new movie to recommend <br>
 takes user id as input, prints out the names of 5 recommended movies
 ```
+$ javac parser.java
+$ javac weights.java
 $ javac recommend.java
 $ java recommend
 ```
