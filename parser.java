@@ -2,6 +2,34 @@ import java.io.*;
 import java.util.*;
 
 class parser{
+	
+	static Map<Integer, Object[]> getMovieData(String fileName) throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		Map<Integer, Object[]> ret = new HashMap<>();
+		String line;
+		while((line = br.readLine()) != null){
+			if(line.length() == 0)
+				continue;
+			String[] str = line.split("[|]");
+			int id = Integer.parseInt(str[0]);
+			String name = str[1];
+			String date; 
+			if(str[2].length() > 10)
+				date = str[2].split("[-]")[2];
+			else
+				date = "";    
+       		String imdb = str[4];
+       		int[] arr = new int[19];
+       		for(int i = 0; i < 19; i++){
+       			arr[i] = Integer.parseInt(str[i+5]);
+       		}
+       		int rating = 0;
+       		int watches = 0;
+       		ret.put(id, new Object[]{name, date, imdb, arr, new Integer(rating), new Integer(watches)});
+		}
+		return ret;
+	}
+	
 	static String[] getGenre(String fileName) throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader(fileName));
 		List<String> ret = new ArrayList<>();
@@ -17,32 +45,6 @@ class parser{
 		return ret.toArray(new String[sz]);
 	}
 
-	static Map<Integer, Object[]> getMovieData(String fileName) throws IOException{
-		BufferedReader br = new BufferedReader(new FileReader(fileName));
-		Map<Integer, Object[]> ret = new HashMap<>();
-		String line;
-		while((line = br.readLine()) != null){
-			if(line.length() == 0)
-				continue;
-			String[] str = line.split("[|]");
-			int id = Integer.parseInt(str[0]);
-			String name = str[1];
-			String date; 
-			if(str[2].length() > 10)
-				date = str[2].split("[-]")[2];
-			else
-				date = "";
-       		String imdb = str[4];
-       		int[] arr = new int[19];
-       		for(int i = 0; i < 19; i++){
-       			arr[i] = Integer.parseInt(str[i+5]);
-       		}
-       		int rating = 0;
-       		int watches = 0;
-       		ret.put(id, new Object[]{name, date, imdb, arr, new Integer(rating), new Integer(watches)});
-		}
-		return ret;
-	}
 
 	static Map<Integer, Object[]> getUserData(String fileName) throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader(fileName));
