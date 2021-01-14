@@ -50,7 +50,8 @@ $ java data
 
 Genres are always taken as a input in integer (index) <br>
 Exception has been handled for one outlying data <br>
-If in any part a query/queries are entered for which there is no movie, then the output is blank <br> 
+If in any part a query/queries are entered for which there is no movie, then the output is blank <br>
+if left blank, data fields pickup default value e.g. "movie.data". <br>
 
 
 <b>Part 2</b> recommendation <br><br>
